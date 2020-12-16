@@ -9,11 +9,12 @@ require_once('../../vendor/autoload.php');
 class App
 {
     public static function main() {
+        $player1 = new Player();
+        $player2 = new Player();
         $cardDeck = new CardDeck();
-        $cardDeck->shuffle();
-        foreach ($cardDeck->getDeck() as $card) {
-            echo $card . ", ";
-        }
+        $deal = new Deal($cardDeck, $player1, $player2, new HandCounter());
+
+
     }
 }
 

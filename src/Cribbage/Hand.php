@@ -19,6 +19,11 @@ class Hand
         array_push($this->unplayed_cards, $card);
     }
 
+    public function playCard() : Card {
+        $card = array_pop($this->unplayed_cards);
+        return $card;
+    }
+
     public function getUnplayedCards() : array {
         return $this->unplayed_cards;
     }

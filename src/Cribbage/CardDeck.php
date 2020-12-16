@@ -33,6 +33,10 @@ class CardDeck
         }
     }
 
+    public function dealCard() : Card {
+        return array_pop($this->deck);
+    }
+
     public function getDeck() :array {
         return $this->deck;
     }
